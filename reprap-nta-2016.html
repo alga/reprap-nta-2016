@@ -1,0 +1,401 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/xhtml; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+    <title>Pasidaryk 3d spausdintuvą</title>
+
+    <link rel="stylesheet" href="css/reveal.css"/>
+    <link rel="stylesheet" href="css/theme/green.css"/>
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css"/>
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+	<section>
+          <h1>Pasidaryk 3d spausdintuvą!</h1>
+          <p>Albertas Agejevas @alga42<br/>
+          &lt;albertas.agejevas@gmail.com></p>
+          <p>NTA Camp 2016-07-23</p>
+        </section>
+
+	<section data-markdown="">
+          <script type="text/template">
+            Kodėl?
+            ======
+
+            Ultimakeriai po 2000€
+            Note:
+  Daug makerių naudojasi visokiais Ultimakeriais ir Makerbotais už
+  €2000+, bet išties ta 3d spauda daug prieinamesnė.  Tai nusprendžiau
+  apie tai papasakot per NTA.  Pirmą Reprapą esu pasidaręs prieš 4
+  metus, o dabar surinkau šiuolaikišką spausdintuvą šiuolaikiškai, kad
+  galėčiau papasakot.
+
+          </script>
+        </section>
+        <section>
+	  <section data-markdown="">
+            <script type="text/template">
+              Kas tas 3d spausdintuvas?
+              =========================
+
+              AKA Additive Manufacturing.
+            </script>
+          </section>
+
+	  <section data-markdown="">
+            <script type="text/template">
+              Daug technologijų
+              =======================
+
+              išrastų 1980-aisiais
+
+              - Binder Jetting
+              - Directed Energy Deposition
+              - Material Extrusion
+              - Material Jetting
+              - Powder Bed Fusion
+              - Sheet Lamination
+              - Vat Photopolymerization
+            </script>
+          </section>
+
+	  <section data-markdown="">
+            <script type="text/template">
+              FFF/FDM
+              =======================
+              Scott Crump patentas 1989 metais.
+
+              Stratasys.
+            </script>
+          </section>
+
+	  <section data-markdown="">
+            <script type="text/template">
+              RepRap Projektas
+              =======================
+              Prof. Adrian Bowyer, University of Bath.
+
+              Note:
+              Darwin 2008, Mendel 2009, Huxley.
+
+              Makerbot 2009, Ultimaker 2011, Printrbot 2011, …
+
+              Prusa Mendel, iteration 2, i3.  Mendel90.  Rostock,
+              Kossel, 3DR.
+            </script>
+          </section>
+
+        </section>
+        <section>
+	  <section data-markdown="">
+            <script type="text/template">
+              Iš ko susideda 3d spausdintuvas?
+              ================================
+
+              - 3 ašių robotas.
+                 - XZ gantry, XY platform, SCARA, Delta.
+                 - žingsniniai varikliukai ir jų draiveriai
+                 - dantyti diržai ir dantračiai
+              - Kontroleris (gali būt su ekraniuku ir SD kortele)
+              - Ekstruderis ir hot endas
+              - Hobbed bolt
+            </script>
+          </section>
+	  <section>
+            <img src="pics/ramps.png" />
+          </section>
+	  <section>
+            <img src="pics/IMG_20160701_135656.jpg"  height="100%" />
+          </section>
+	  <section>
+            <img src="pics/greg.png"  height="100%" />
+          </section>
+	  <section>
+            <img src="pics/IMG_20160718_023136.jpg"  height="100%" />
+          </section>
+	  <section>
+            <img src="pics/IMG_20160718_023115.jpg" height="100%"/>
+          </section>
+        </section>
+        <section>
+	  <section data-markdown="">
+            <script type="text/template">
+              Įrankiai
+              ========
+
+              - Mikrometras!
+              - Slankmatis
+              - Lituoklis
+              - Drėlė ir grąžtai
+              - Atsuktuvai ir veržliarakčiai (5.5, 7, 13, 17 mm)
+              - Kampainis
+              - M3, M5 sriegikliai
+            </script>
+          </section>
+        </section>
+        <section>
+	  <section data-markdown="">
+            <script type="text/template">
+              Softas
+              ======
+
+              - CADai: OpenSCAD, FreeCAD; Meshlab, Blender
+              - Slic3r, Skeinforge, Cura
+              - Hostai: Pronterface, Repetier Host.  SD kortelė.
+              - Firmware: Marlin, Teacup, ...
+            </script>
+          </section>
+	  <section>
+            <img src="pics/openscad.png" />
+          </section>
+	  <section>
+            <img src="pics/slic3r.png" />
+          </section>
+	  <section>
+            <img src="pics/marlin.png" />
+          </section>
+        </section>
+        <section>
+	  <section data-markdown="">
+            <script type="text/template">
+              Kalibravimas
+              ============
+
+              - Ašių ortogonalumas, ypač pagrindo plokštumas.
+              - Motoriukų steps/mm.  (16 \* 200 stepų) / (20 dantų \* 2 mm)
+              - Ekstruderio kalibravimas: liniuotė ir šėrimas, vienas
+              sluoksnis ir mikrometras, spausdinimas ir stebėjimas.
+              - Temperatūrų kalibravimas.
+            </script>
+          </section>
+        </section>
+        <section>
+	  <section data-markdown="" data-background="pics/2012-12-31%2017.38.13.jpg">
+            <script type="text/template">
+              Pirmas mano 3d spausdintuvas
+              ============================
+
+              <!--img src="pics/2012-12-31 17.38.13.jpg"/-->
+              Note:
+         
+              2012 m. Internete radau TED talką apie 3d spaudą.  Ten
+              sakė, kad jau dabar galima gauti spausdintuvą už $200.
+              Pradėjau domėtis, radau RepRap wiki, nusprendžiau
+              darytis Prusa i2.  Susipirkau dalis iš ebejaus, 2012
+              m. lapkritį pradėjau spauisdintis pirmąsias dalis.
+              Kainavo apie 1300 Lt.
+
+              Lenkiškas hot endas ir J-head.
+
+              Su juo atspausdinau spausdintuvus 2 draugams, ir antrą sau.
+
+              Spausdina PLA ir ABS.  Pusiau matinis stiklas ir ABS sultys.
+            </script>
+          </section>
+        </section>
+        <section>
+	  <section data-markdown="">
+            <script type="text/template">
+              Kaip dariausi antrą printerį
+              ============================
+              EU stock :(
+              
+              - Elektronika iš Ispanijos.
+              - Tikras E3D V6 hot endas
+              - Fanierinis rėmas iš Ukrainos
+              - Aliumininis rėmas iš Klaipėdos
+              - Guoliai, dantračiai, diržai, padas iš UK
+              - Varžtai iš Senukų
+              - Tiesus šlifuotas strypas iš Italinox (N9, iki -36µm paklaida)
+              - (Stiklas iš stiklo pjaustytojų apie 0.5€.)
+
+              Note:
+              Truputį susivėlinau su projekto pradžia, tai pirkau
+              dalis iš Ebejaus ES pardavėjų, brangiau.
+            </script>
+          </section>
+          <section>
+            <img src="pics/IMG_20160701_135629.jpg" height="100%"/>
+          </section>
+          <section>
+            <img src="pics/IMG_20160702_232458.jpg" height="100%"/>
+          </section>
+          <section>
+            <img src="pics/IMG_20160702_232527.jpg" height="100%"/>
+          </section>
+          <section>
+            <img src="pics/IMG_20160709_035749.jpg" height="100%"/>
+          </section>
+          <section>
+            <img src="pics/IMG_20160709_162540.jpg" height="100%"/>
+          </section>
+          <section>
+            <img src="pics/IMG_20160711_225313.jpg" height="100%"/>
+          </section>
+          <section>
+            <img src="pics/IMG_20160712_093057.jpg" height="100%"/>
+          </section>
+          <section>
+            <img src="pics/IMG_20160716_173223.jpg" height="100%"/>
+          </section>
+          <section>
+            <img src="pics/IMG_20160722_175812.jpg" height="100%"/>
+          </section>
+	  <section data-markdown="">
+            <script type="text/template">
+              Sąmata
+              ============================
+              | Daiktas | Kaina |
+              | ------- |-----:|
+              | Guoliai, diržai, dantračiai |   44€ |
+              | Elektronika |  198€ |
+              | E3D hot end |   87€ |
+              | Rėmas aliumininis |   74€ |
+              | Varžtai ir veržlės|    8€ |
+              | Lygus strypas |    4€ |
+              | Plastikas |    4€ |
+              | **VISO**  |  **419€** |
+            </script>
+          </section>
+        </section>
+        <section>
+	  <section data-markdown="">
+            <script type="text/template">
+              Kokios kilo problemos
+              =====================
+
+              - Prusa i3 daug variantų
+              - 6 mm faniera yra siplna
+              - Kalibravimas užtruko
+            </script>
+          </section>
+        </section>
+        <section>
+	  <section data-markdown="">
+            <script type="text/template">
+              Kaip patarčiau daryti jums
+              ==========================
+
+              Aliexpress, bet..
+
+            </script>
+          </section>
+	  <section data-markdown="" data-background="pics/aliexpress.jpg">
+            <script type="text/template">
+              Aliexpress: expectations vs reality
+              ===================================
+            </script>
+          </section>
+	  <section data-markdown="">
+            <script type="text/template">
+              O jei rimtai
+              ============
+              - Mėnuo atsiuntimui
+              - Gali pagauti muitinė
+              - Gali apgauti kinai
+            </script>
+          </section>
+	  <section data-markdown="" >
+            <script type="text/template">
+              #Aliexpress
+
+              | Kas | Kiek  | Kas | Kiek |
+              |------|---:|------|---:|
+              | Ramps+Arduino | $27 | strypai		| $26|
+              | E3D clone		| $9| Varžtukai iš senukų | $9|
+              | Steppers		| $47| Muitai		| $20|
+              | Rėmas		| $35| Plastikai		| $20|
+              | 12x LM8UU 6x608	| $11| PSU		| $27|
+              | **VISO**		| **$230**|||
+            </script>
+          </section>
+	  <section data-markdown="" >
+            <script type="text/template">
+              Bet šiaip yra ebay ir Aliexpress rinkinių nuo &#xa3;220 ar $195.
+              <img src="pics/ebay.png"/>
+            </script>
+          </section>
+        </section>
+        <section>
+	  <section data-markdown="" >
+            <script type="text/template">
+              Kam viso to reikia?
+              ===================
+
+              Labai naudingas dalykas!
+            </script>
+          </section>
+	  <section>
+            <img src="pics/things1.png" height="95%"/>
+          </section>
+	  <section>
+            <img src="pics/things2.png"  height="95%"/>
+          </section>
+	  <section data-markdown="">
+            <script type="text/template">
+              O taip pat:
+              ===========
+
+              - adata mezgimo malūnui
+              - gertuvės laikiklio tvirtinimas Turistui
+              - sausainių formelės su Tuxais ir kt.
+              - dėžutė shiftlight'ui
+              - adapteris spidometro sensoriui
+              - ratukas aliuminio profiliui sulenkti
+              - lankelis su katės ausimis dukrai
+              - etc. etc...
+              </script>
+          </section>
+        </section>
+        <section>
+	  <section data-markdown="">
+            <script type="text/template">
+              Taigi, gaminkitės 3d spausdintuvus!
+              ===================================
+
+              Kreipkitės, jei reiks pagalbos.
+              @alga42 albertas.agejevas@gmail.com
+            </script>
+          </section>
+        </section>
+        <!--
+	    <section>
+            <script type="text/template">
+            </script>
+            </section>
+        -->
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js" type="text/javascript"></script>
+    <script src="js/reveal.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+      history: true,
+
+      // More info https://github.com/hakimel/reveal.js#dependencies
+      dependencies: [
+      { src: 'plugin/markdown/marked.js' },
+      { src: 'plugin/markdown/markdown.js' },
+      { src: 'plugin/notes/notes.js', async: true },
+      { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+      ]
+      });
+    </script>
+  </body>
+</html>
